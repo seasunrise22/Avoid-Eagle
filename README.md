@@ -16,7 +16,7 @@
 
 ## Code Preview
 ***플레이어를 y축 방향으로 움직이게 했을 때, 원하는 위치에 멈추도록 만들기 위한 코드***
-```C#
+```
 void Update () 
 	{
 		playerPos = player.transform.position;
