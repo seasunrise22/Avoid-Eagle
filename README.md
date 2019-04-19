@@ -22,11 +22,11 @@ void Update ()
 	playerPos = player.transform.position;
 	stopPosY = player.transform.position.y;	
 
-		// 이동거리 제한
-		if(isMove)
+	// 이동거리 제한
+	if(isMove)
+	{
+		if(Mathf.Abs(stopPosY - startPosY) > 0.5f) // Mathf.Abs: 절댓값 반환
 		{
-			if(Mathf.Abs(stopPosY - startPosY) > 0.5f) // Mathf.Abs: 절댓값 반환
-			{
 				player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); // 정지	
 				isMove = false;
 			}
