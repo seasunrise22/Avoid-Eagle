@@ -15,12 +15,12 @@
 - Language : C#
 
 ## Code Preview
-***플레이어를 y축 방향으로 움직이게 했을 때, 원하는 위치에 멈추도록 만들기 위한 코드***
-```
+***플레이어를 y축 방향으로 움직이게 했을 때, 원하는 위치에 멈추도록 만들기 위한 로직***
+```C#
 void Update () 
-	{
-		playerPos = player.transform.position;
-		stopPosY = player.transform.position.y;	
+{
+playerPos = player.transform.position;
+stopPosY = player.transform.position.y;	
 
 		// 이동거리 제한
 		if(isMove)
