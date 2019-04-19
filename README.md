@@ -48,7 +48,7 @@ public void UpPress()
 ```
 
 ***독수리 자동 생성 알고리즘***
-<pre><code>
+```c#
 void Update () 
 {
 	delta += Time.deltaTime; // 프레임에 종속되지 않도록 하기 위해
@@ -64,7 +64,7 @@ void Update ()
 		cloneEagle.transform.position = new Vector3(4, (mainCamera.transform.position.y + genPosY), 0); // 화면 오른쪽에서 생성
 	}		
 }
-</code></pre>
+```
 
 ## Screenshots
 ![noname01](https://user-images.githubusercontent.com/45503931/56436872-581a6300-6318-11e9-93fe-dc5faa74b1ff.png)
