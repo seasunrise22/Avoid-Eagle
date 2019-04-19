@@ -25,26 +25,26 @@ void Update ()
     // 이동거리 제한
     if(isMove)
     {
-    if(Mathf.Abs(stopPosY - startPosY) > 0.5f) // Mathf.Abs: 절댓값 반환
-		{
-				player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); // 정지	
-				isMove = false;
-			}
-		}						
-	}
+        if(Mathf.Abs(stopPosY - startPosY) > 0.5f) // Mathf.Abs: 절댓값 반환
+        {
+            player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); // 정지	
+            isMove = false;
+        }
+    }						
+}
 
-	public void UpPress()
-	{
-		// 일시정지 상태가 아니고 플레이어가 죽은게 아니라면
-		if(!pauseButton.GetComponent<PauseButton>().isPause && !player.GetComponent<PlayerController>().isDead)
-		{			
-			player.GetComponent<Animator>().SetTrigger("MoveTrigger"); // 애니메이션 재생	
-			player.GetComponent<AudioSource>().Play(); // 소리 재생
-			startPosY = playerPos.y; // 출발지점 y축 저장
-			player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 10); // y축 방향으로 속도 증가		
-			isMove = true;	
-		}			
-	}
+public void UpPress()
+{
+    // 일시정지 상태가 아니고 플레이어가 죽은게 아니라면
+    if(!pauseButton.GetComponent<PauseButton>().isPause && !player.GetComponent<PlayerController>().isDead)
+    {			
+        player.GetComponent<Animator>().SetTrigger("MoveTrigger"); // 애니메이션 재생	
+        player.GetComponent<AudioSource>().Play(); // 소리 재생
+        startPosY = playerPos.y; // 출발지점 y축 저장
+        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 10); // y축 방향으로 속도 증가		
+        isMove = true;	
+    }			
+}
 ```
 
 ## Screenshots
