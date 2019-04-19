@@ -16,7 +16,7 @@
 
 ## Code Preview
 ***플레이어를 y축 방향으로 움직이게 했을 때, 원하는 위치에 멈추도록 만들기 위한 로직***
-```C#
+```c#
 void Update () 
 {
     playerPos = player.transform.position;
@@ -45,6 +45,25 @@ public void UpPress()
         isMove = true;	
     }			
 }
+```
+
+***독수리 자동 생성 알고리즘***
+```c#
+void Update () 
+	{
+		delta += Time.deltaTime; // 프레임에 종속되지 않도록 하기 위해
+
+		// 0.3초마다 한 번 씩 실행. span = 0.3f
+		if((delta > span) && !player.GetComponent<PlayerController>().isDead)
+		{
+			delta = 0; // 시간변수 초기화
+			cloneEagle = Instantiate(eaglePrefab) as GameObject; // 독수리 클론 생성
+			cloneArray.Add(cloneEagle); // 생성된 클론을 배열에 담음
+			genPosY  = Random.Range(0, 10); // 독수리가 생성될 높이. (이상, 미만)사이의 숫자 중 하나 랜덤	
+
+			cloneEagle.transform.position = new Vector3(4, (mainCamera.transform.position.y + genPosY), 0); // 화면 오른쪽에서 생성
+		}		
+	}
 ```
 
 ## Screenshots
