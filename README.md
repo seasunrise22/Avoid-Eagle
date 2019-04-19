@@ -61,7 +61,8 @@ void Update ()
 		cloneArray.Add(cloneEagle); // 생성된 클론을 배열에 담음
 		genPosY  = Random.Range(0, 10); // 독수리가 생성될 높이. (이상, 미만)사이의 숫자 중 하나 랜덤	
 
-		cloneEagle.transform.position = new Vector3(4, (mainCamera.transform.position.y + genPosY), 0); // 화면 오른쪽에서 생성
+		// 화면 오른쪽에서 생성
+		cloneEagle.transform.position = new Vector3(4, (mainCamera.transform.position.y + genPosY), 0); 
 	}		
 }
 ```
