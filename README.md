@@ -19,8 +19,8 @@
 ```C#
 void Update () 
 {
-playerPos = player.transform.position;
-stopPosY = player.transform.position.y;	
+	playerPos = player.transform.position;
+	stopPosY = player.transform.position.y;	
 
 		// 이동거리 제한
 		if(isMove)
