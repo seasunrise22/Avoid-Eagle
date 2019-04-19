@@ -11,8 +11,8 @@
 올라간 높이로 순위가 매겨져 다른 유저와 경쟁할 수 있습니다.
 
 ## Development Environment
-IDE : Unity 2017.4.6f1
-Language : C#
+- IDE : Unity 2017.4.6f1
+- Language : C#
 
 ## Code Preview
 ***Sample***
