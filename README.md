@@ -50,7 +50,7 @@ public void UpPress()
 ***독수리 자동 생성 알고리즘***
 ```c#
 void Update () 
-{
+{	
 	delta += Time.deltaTime; // 프레임에 종속되지 않도록 하기 위해
 
 	// 0.3초마다 한 번 씩 실행. span = 0.3f
